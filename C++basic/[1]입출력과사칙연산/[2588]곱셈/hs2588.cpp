@@ -4,7 +4,10 @@ using namespace std;
 int main() {
     int a, b;
     cin >> a >> b;
-    /*cout <<
-    */
+    cout << a * (b % 10) << endl;
+    cout << a * ((b / 10) % 10) << endl;
+    cout << a * (b / 100) << endl;
+    cout << a * (b % 10) + (a * ((b / 10) % 10)) * 10 + (a * (b / 100)) * 100 << endl;
+
     return 0;
 }
