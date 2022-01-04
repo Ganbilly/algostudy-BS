@@ -3,10 +3,12 @@ using namespace std;
 
 int main()
 {
-    int A, B;
-    cin >> A >> B;
+    int a, x;
+    cin >> a >> x;
 
-    cout << A * B;
-
+    cout << a * (x % 10) << "\n";
+    cout << a * ((x / 10) % 10) << "\n";
+    cout << a * (x / 100) << "\n";
+    cout << a * x;
     return 0;
 }
