@@ -5,27 +5,26 @@ int main()
 {
     int n;
     int min, max;
+    int num;
 
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
     cin >> n;
-    int *array = new int[n];
 
     for (int i = 0; i < n; i++)
     {
-        cin >> array[i];
-    }
-    min = max = array[0];
+        cin >> num;
 
-    for (int i = 0; i < n; i++)
-    {
-        if(min >= array[i])
-            min = array[i];
-         
-        if(max <= array[i])
-            max = array[i];
+        if(i == 0)
+        min = max = num;
+
+        if(min >= num)
+            min = num;
+
+        if(max <= num)
+            max = num;
     }
     cout << min << " " << max;
 
