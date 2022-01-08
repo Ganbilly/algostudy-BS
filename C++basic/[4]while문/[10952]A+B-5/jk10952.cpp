@@ -4,25 +4,22 @@ using namespace std;
 int main()
 {
     int n, m;
-    int count = 0;
 
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    cin >> n;
-    m = n;
-    while (1)
+    while (cin >> n >> m)
     {
-        //26 -> 2+6=8 -> 68;
-        m = ((m / 10) + (m % 10)) % 10 + ((m % 10) * 10);
-        count++;
-        if (n == m)
+        if (n > 10 || m > 10)
         {
             break;
         }
+        if (n == 0 && m == 0)
+        {
+            break;
+        }
+        cout << n + m << "\n";
     }
-    cout << count;
-
     return 0;
 }
