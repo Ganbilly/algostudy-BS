@@ -9,5 +9,6 @@ int main()
     cin >> a >> b >> c >> d >> e;
     x = ((a * a) + (b * b) + (c * c) + (d * d) + (e * e)) % 10;
     cout << x;
-    ;
+
+    return 0;
 }
