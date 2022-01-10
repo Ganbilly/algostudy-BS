@@ -4,24 +4,35 @@ using namespace std;
 int main()
 {
     int x, y, w, h; // (0,0) ~ (w,h)
+    int comx;
+    int comy;
 
     cin >> x >> y >> w >> h;
 
-    if (w - x < h - y && w - x < x)
+    if (w - x < x)
     {
-        cout << w - x;
-    }
-    else if (x < y && x < w - x)
-    {
-        cout << x;
-    }
-    else if (w - x >= h - y && h - y <= y)
-    {
-        cout << h - y;
+        comx = w - x;
     }
     else
     {
-        cout << y;
+        comx = x;
+    }
+    if (h - y < y)
+    {
+        comy = h - y;
+    }
+    else
+    {
+        comy = y;
+    }
+
+    if (comx < comy)
+    {
+        cout << comx;
+    }
+    else
+    {
+        cout << comy;
     }
 
     return 0;

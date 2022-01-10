@@ -3,11 +3,17 @@ using namespace std;
 
 int main()
 {
-    int n, m;
+    int num;
+    int sum = 0;
+    cin >> num;
 
-    cin >> n;
+    sum += num;
+    while (num > 0)
+    {
+        sum += num % 10;
+        num /= 10;
+    }
+    cout << sum;
 
-    m = (n) + (n / 1000000)
-                  cout
-        << m;
+    return 0;
 }
