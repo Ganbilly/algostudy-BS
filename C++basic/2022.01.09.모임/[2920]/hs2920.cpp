@@ -12,20 +12,20 @@ int main()
         cin >> arr[i];
 
         if (arr[i] == i + 1)
-        asc++;
+            asc++;
 
         else if (arr[i] == 8 - i)
-        des++;
+            des++;
     }
-    
-    if (asc == 8)
-    cout << "ascending";
-    
-    else if (des == 8)
-    cout << "descending";
 
-    else 
-    cout << "mixed";
+    if (asc == 8)
+        cout << "ascending";
+
+    else if (des == 8)
+        cout << "descending";
+
+    else
+        cout << "mixed";
 
     return 0;
 }
