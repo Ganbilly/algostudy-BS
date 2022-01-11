@@ -1,24 +1,34 @@
 #include <iostream>
 using namespace std;
 
-int N;
-int result;
-int sum;
-int arr[1000000] = {0};
-
 int main()
 {
-    for (int i = 1; i < 1000000; i++)
-    {
-        result = i;
-        sum = i;
+    int N;
+    int result;
+    int num;
 
-        while (sum > 0)
+    cin >> N;
+
+    for (int i = 0; i < N; i++)
+    {
+        num = i;
+        result = num;
+
+        while (num != 0)
         {
-            result = result + (sum % 10);
-            sum = sum / 10;
+            result += num % 10;
+            num /= 10;
         }
 
+        if (result == N)
+        {
+            cout << i;
+            return 0;
+        }
     }
+    
+    cout << 0;
+
+    return 0;
 }
 
