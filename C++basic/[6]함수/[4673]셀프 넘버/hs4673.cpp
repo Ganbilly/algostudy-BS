@@ -1,25 +1,47 @@
 #include <iostream>
 using namespace std;
 
-int d(int n)
-{
-    int sum;
-}
-
 int main()
 {
-    int i;
+    int arr[10000] = {0};
     int num;
 
-    for (int i = 50; i <= 70; i++)
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    for (int i = 1; i < 10000; i++)
     {
-        for (int num = 2; num < i; num++)
+        if (i < 10)
         {
-            if (i % num == 0)
-                break;
+            arr[i + i] = 1;
         }
-        if (i == num)
-            cout << i;
+
+        else if (i < 100)
+        {
+            arr[i + i / 10 + 1 % 10] = 1;
+        }
+
+        else if (i < 1000)
+        {
+            arr[i + i / 100 + i % 100 / 10 + i % 10] = 1;
+        }
+
+        else if (i < 10000)
+        {
+            num = i + i / 1000 + i % 1000 / 10 + i % 100 / 10 + i % 10;
+            if (num < 10000)
+            {
+                arr[num] = 1;
+            }
+        }
     }
+
+    for (int i = 1; i < 10000; i++)
+    {
+        if (!arr[i])
+            cout << i << '\n';
+    }
+
     return 0;
 }
