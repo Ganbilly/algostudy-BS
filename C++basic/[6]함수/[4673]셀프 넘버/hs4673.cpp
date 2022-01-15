@@ -1,46 +1,40 @@
 #include <iostream>
 using namespace std;
 
+int d(int n)
+{
+    int num = n;
+
+    while (n > 0)
+    {
+        num += n % 10;
+        n = n / 10;
+    }
+
+    return num;
+}
+
 int main()
 {
-    int arr[10000] = {0};
-    int num;
+    int arr[10001];
+    int temp;
 
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    for (int i = 1; i < 10000; i++)
+    for (int i = 0; i < 10001; i++)
     {
-        if (i < 10)
-        {
-            arr[i + i] = 1;
-        }
+        temp = d(i);
 
-        else if (i < 100)
+        if (temp < 10001)
         {
-            arr[i + i / 10 + 1 % 10] = 1;
-        }
-
-        else if (i < 1000)
-        {
-            arr[i + i / 100 + i % 100 / 10 + i % 10] = 1;
-        }
-
-        else if (i < 10000)
-        {
-            num = i + i / 1000 + i % 1000 / 10 + i % 100 / 10 + i % 10;
-            if (num < 10000)
-            {
-                arr[num] = 1;
-            }
+            arr[temp] = 1;
         }
     }
 
-    for (int i = 1; i < 10000; i++)
+    for (int i = 0; i < 10001; i++)
     {
-        if (!arr[i])
+        if (arr[i] != 1)
+        {
             cout << i << '\n';
+        }
     }
 
     return 0;

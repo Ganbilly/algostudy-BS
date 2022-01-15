@@ -12,7 +12,7 @@ int main()
         cin >> n;
 
         string str = n;
-        reverse(str.begin(), str.end());
+        reverse(n.begin(), n.end());
         
         if (n == "0")
             break;
