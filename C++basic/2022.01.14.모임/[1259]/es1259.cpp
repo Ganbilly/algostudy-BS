@@ -17,7 +17,7 @@ int main(){
             
         for(int i = str.size() - 1; i >= 0; i--)
             rstr.push_back(str.at(i));                 //스트링의 맨 뒤부터 하나씩 rstr에 푸쉬
-
+             
         if(str == rstr){                            //입력받은 스트링과 뒤집은 스트링 비교 같으면 yes 아니면 no 출력
             cout << "yes\n";
             continue;
