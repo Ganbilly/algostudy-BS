@@ -1,27 +1,26 @@
 #include <iostream>
 #include <algorithm>
-#include <string>
 using namespace std;
 
 int main()
 {
-    string n = 0;
+    string pel;
 
-    while (1)
+    while (pel != "0")
     {
-        cin >> n;
+        cin >> pel;
 
-        string str = n;
-        reverse(n.begin(), n.end());
-        
-        if (n == "0")
-            break;
+        string str = pel;
+        reverse (pel.begin(), pel.end());
 
-        else if (n == str)
-            cout << "yes\n";
-        
-        else
-            cout << "no\n";
+        if (pel != "0")
+        {
+            if (pel == str)
+                cout << "yes\n";
+            
+            else
+                cout << "no\n";
+        }
     }
 
     return 0;
