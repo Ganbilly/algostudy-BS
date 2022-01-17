@@ -5,7 +5,7 @@ int main()
 {
     int n, m;
     int arr[100];
-    int result;
+    int result = 0;
 
     cin >> n >> m;
 
@@ -20,7 +20,7 @@ int main()
         {
             for (int k = j + 1; k < n; k++)
             {
-                if (arr[i] + arr[j] + arr[k] <= m)
+                if (arr[i] + arr[j] + arr[k] <= m && arr[i] + arr[j] + arr[k] > result)
                     result = arr[i] + arr[j] + arr[k];
             }
         }
