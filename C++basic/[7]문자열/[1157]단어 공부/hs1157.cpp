@@ -16,17 +16,19 @@ int main()
 
     for (int i = 0; i < str.length(); i++)
     {
-        if (str[i] >= 65 && str[i] < 90)
-            arr[str[i] - 65]++;     //대문자
-        if (str[i] >= 97 && str[i] < 122)
-            arr[str[i] - 97]++;     //소문자
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            arr[str[i] - 'A']++;             //대문자
+        if (str[i] >= 'a' && str[i] <= 'z')
+            arr[str[i] - 'a']++;             //소문자
     }
 
     for (int i = 0; i < 26; i++)
     {
         if (max < arr[i])
+        {
             max = arr[i];
             index = i;
+        }
     }
 
     for (int i = 0; i < 26; i++)
