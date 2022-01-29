@@ -8,7 +8,7 @@ int main()
 
     cin >> str;
 
-    cout << str + "?" << "?" << "!";
+    cout << str << "??!";
 
     return 0;
 }
