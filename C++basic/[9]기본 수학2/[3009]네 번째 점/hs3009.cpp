@@ -1,7 +1,52 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
+
 int main()
+{
+    int x, y;
+    vector<pair<int, int> > p;    //{x, y}
+
+    for (int i = 0; i < 3; i++)
+    {
+        cin >> x >> y;
+        p.push_back({x, y});
+    }
+
+    if (p[0].first == p[1].first)
+        x = p[2].first;
+    else if (p[0].first == p[2].first)
+        x = p[1].first;
+    else
+        x = p[0].first;
+
+    if (p[0].second == p[1].second)
+        y = p[2].second;
+    else if (p[0].second == p[2].second)
+        y = p[1].second;
+    else
+        y = p[0].second;
+
+    cout << x << " " << y;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*int main()
 {
     int x1, y1, x2, y2, x3, y3, x, y;
     cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
@@ -21,13 +66,15 @@ int main()
     cout << x << " " << y << '\n';
 
     return 0;
-}
+}*/
 
 
 
-
-/*int main()
+/*
+int main()
 {
+    cout.tie(NULL);
+    cin.tie(NULL);
     int x[3];
     int y[3];
 
