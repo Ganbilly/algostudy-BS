@@ -5,7 +5,9 @@ int main(){
     int n;
     int num = 0;        //영화 시리즈 수
     int count = 0;      //영화 종말 수
-
+    
+    cin >> n;
+    
     while (count != n)
     {
         num++;
